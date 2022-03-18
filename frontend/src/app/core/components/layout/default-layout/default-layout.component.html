@@ -1,0 +1,12 @@
+<div fxLayout="column" fxLayoutGap="1rem" class="layout-container">
+  <app-header></app-header>
+  <div fxLayout="row" fxFlex fxLayoutGap="1rem">
+    <div fxFlex="20">
+      <app-sidebar fxFlex></app-sidebar>
+    </div>
+    <div fxFlex="80">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

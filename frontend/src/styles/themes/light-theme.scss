@@ -1,1 +1,7 @@
-@import "~primeng/resources/themes/lara-light-indigo/theme.css";
+@import "../../../node_modules/primeng/resources/themes/lara-light-indigo/theme.css";
+
+// Custom styles
+
+html {
+  color: rgba(0, 0, 0, 0.87);
+}
