@@ -7,6 +7,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DefaultLayoutComponent } from './components/layout/default-layout/default-layout.component';
 import { FullWidthLayoutComponent } from './components/layout/full-width-layout/full-width-layout.component';
+import {ToggleButtonModule} from "primeng/togglebutton";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FullWidthLayoutComponent } from './components/layout/full-width-layout/
     AppRoutingModule,
     FlexLayoutModule,
     CommonModule,
-  ]
+    ToggleButtonModule,
+  ],
 })
-export class CoreModule { }
+export class CoreModule {}

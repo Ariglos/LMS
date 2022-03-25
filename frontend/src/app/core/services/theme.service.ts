@@ -7,22 +7,30 @@ import { themes } from '../constants/Constants';
   providedIn: 'root',
 })
 export class ThemeService {
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  themeLink: HTMLLinkElement;
+
+  constructor(@Inject(DOCUMENT) private document: Document) {
+    this.themeLink = document.getElementById('app-theme') as HTMLLinkElement;
+  }
 
   switchTheme(theme: Theme) {
-    let themeLink = this.document.getElementById(
-      'app-theme'
-    ) as HTMLLinkElement;
-
     switch (theme) {
       case Theme.Light:
-        themeLink.href = themes.light;
+        this.themeLink.href = themes.light;
         break;
       case Theme.Dark:
-        themeLink.href = themes.dark;
+        this.themeLink.href = themes.dark;
         break;
       default:
-        themeLink.href = themes.light;
+        this.themeLink.href = themes.light;
     }
+  }
+
+  setLightTheme() {
+    this.themeLink.href = themes.light;
+  }
+
+  setDarkTheme() {
+    this.themeLink.href = themes.dark;
   }
 }

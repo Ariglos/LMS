@@ -4,6 +4,12 @@
     <div fxLayout="row" fxLayoutGap="2rem">
       <a routerLink="/">HOME</a>
       <a routerLink="/login">LOGIN</a>
+      <p-toggleButton
+        onIcon="pi pi-sun"
+        offIcon="pi pi-moon"
+        (onChange)="onThemeChange($event)"
+
+      ></p-toggleButton>
     </div>
   </div>
   <div fxLayoutAlign="center">

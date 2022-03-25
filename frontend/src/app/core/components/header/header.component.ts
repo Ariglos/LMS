@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ThemeService} from "../../services/theme.service";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
   }
 
+  onThemeChange(event: any) {
+    if (event.checked) {
+      this.themeService.setDarkTheme();
+    } else {
+      this.themeService.setLightTheme();
+    }
+  }
 }
