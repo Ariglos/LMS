@@ -1,5 +1,11 @@
 @import "../../../node_modules/primeng/resources/themes/lara-dark-indigo/theme.css";
 
+// Overridden theme
+
+.p-button:focus {
+  box-shadow: none;
+}
+
 // Custom styles
 
 html {
