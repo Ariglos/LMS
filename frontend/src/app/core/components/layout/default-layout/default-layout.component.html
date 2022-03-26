@@ -4,9 +4,11 @@
     <div fxFlex="20">
       <app-sidebar fxFlex></app-sidebar>
     </div>
-    <div fxFlex="80">
-      <router-outlet></router-outlet>
+    <div fxLayout="column" fxFlex="80" fxLayoutAlign="space-between">
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+      <app-footer></app-footer>
     </div>
   </div>
-  <app-footer></app-footer>
 </div>

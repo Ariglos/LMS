@@ -8,7 +8,15 @@
 
 // Custom styles
 
+$base-background-color: #1E1E1E;
+$component-background-color : #2B2B3B;
+$base-color : #FFFFFFDE;
+
 html {
-  background-color: #1E1E1E;
-  color: rgba(255, 255, 255, 0.87);
+  background-color: $base-background-color;
+  color: $base-color;
+}
+
+.component {
+  background-color: $component-background-color;
 }
