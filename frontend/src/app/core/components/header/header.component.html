@@ -1,18 +1,10 @@
-<div fxLayout="column" style="background-color: aqua">
-  <div fxLayoutAlign="space-between center" >
-    <div>LOGO</div>
-    <div fxLayout="row" fxLayoutGap="2rem">
-      <a routerLink="/">HOME</a>
-      <a routerLink="/login">LOGIN</a>
+<div fxLayout="column">
+  <div fxLayoutAlign="space-between" class="header">
+    <h1 >LMS - Life Management System</h1>
       <p-toggleButton
         onIcon="pi pi-sun"
         offIcon="pi pi-moon"
         (onChange)="onThemeChange($event)"
-
       ></p-toggleButton>
-    </div>
-  </div>
-  <div fxLayoutAlign="center">
-    <p>LMS</p>
   </div>
 </div>
