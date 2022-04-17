@@ -8,15 +8,18 @@
 
 // Custom styles
 
-$base-background-color: #1E1E1E;
-$component-background-color : #2B2B3B;
-$base-color : #FFFFFFDE;
+:root {
+  --base-background-color: #1E1E1E;
+  --component-primary-color: #2B2B3B;
+  --component-secondary-color: #252534;
+  --base-color: #FFFFFFDE;
+}
 
 html {
-  background-color: $base-background-color;
-  color: $base-color;
+  background-color: var(--base-background-color);
+  color: var(--base-color);
 }
 
 .component {
-  background-color: $component-background-color;
+  background-color: var(--component-primary-colorr);
 }

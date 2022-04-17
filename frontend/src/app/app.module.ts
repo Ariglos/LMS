@@ -10,6 +10,7 @@ import { LoginComponent } from './test/login/login.component';
 import { DashboardComponent } from './test/dashboard/dashboard.component';
 import {CoreModule} from "./core/core.module";
 import {SharedModule} from "./shared/shared.module";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, DashboardComponent],
@@ -20,7 +21,8 @@ import {SharedModule} from "./shared/shared.module";
     FlexLayoutModule,
     ButtonModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,45 @@
+<div fxLayout="column" fxLayoutAlign="space-between" class="menu">
+  <div>
+    <div fxLayoutAlign="space-between center" class="menu__header">
+      <div
+        *ngIf="expandedMode"
+        fxLayoutAlign="start center"
+        class="menu__header__title"
+      >
+        <fa-icon class="logo" [icon]="faHouseLaptop"></fa-icon>
+        <div class="app-name">LMS</div>
+      </div>
+      <button
+        *ngIf="expandedMode"
+        (click)="onExpandBtnClick()"
+        class="menu__btn--expand"
+      >
+        <i class="pi pi-angle-double-left"></i>
+      </button>
+      <button
+        *ngIf="!expandedMode"
+        (click)="onExpandBtnClick()"
+        class="menu__btn--expand"
+      >
+        <i class="pi pi-angle-double-right"></i>
+      </button>
+    </div>
+    <div class="menu__navigation">
+      <div *ngFor="let item of menuOptions">
+        <app-menu-item
+          [menuItem]="item"
+          [expandedMode]="expandedMode"
+        ></app-menu-item>
+      </div>
+    </div>
+  </div>
+  <div fxLayoutAlign="space-between center" class="menu__footer">
+    <div *ngIf="expandedMode" class="profile">
+      <div class="profile__name">Jan Wasowski</div>
+      <div class="profile__role">PHP Developer</div>
+    </div>
+    <button class="menu__btn_logout">
+      <i class="pi pi-sign-out"></i>
+    </button>
+  </div>
+</div>

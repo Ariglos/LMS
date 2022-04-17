@@ -1,0 +1,7 @@
+<div fxLayout="column" class="menu__item" [ngClass]="{'expand': expandedMode}">
+  <a class="menu__item__link" [routerLink]="menuItem.link">
+    <i class="menu__item__icon" [class]="menuItem.iconClass"></i>
+   <span *ngIf="expandedMode">{{menuItem.name}}</span>
+  </a>
+  <span class="tooltip">{{menuItem.name}}</span>
+</div>
