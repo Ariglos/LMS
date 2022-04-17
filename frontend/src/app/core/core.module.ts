@@ -13,6 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MenuComponent } from './components/sidebar/menu/menu.component';
 import { MenuItemComponent } from './components/sidebar/menu/menu-item/menu-item.component';
 import {ButtonModule} from "primeng/button";
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {ButtonModule} from "primeng/button";
     ToggleButtonModule,
     FontAwesomeModule,
     ButtonModule,
+    SharedModule
   ],
 })
 export class CoreModule {}

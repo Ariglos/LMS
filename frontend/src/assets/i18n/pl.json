@@ -1,0 +1,10 @@
+{
+  "app-name": "LMS",
+  "menu.home": "Strona główna",
+  "menu.finances": "Finanse",
+  "menu.diet": "Dieta",
+  "menu.car": "Samochód",
+  "menu.users": "Użytkownicy",
+  "menu.settings": "Ustawienia",
+  "menu.log-in": "Zaloguj"
+}

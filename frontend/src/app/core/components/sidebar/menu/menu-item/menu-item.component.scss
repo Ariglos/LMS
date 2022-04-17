@@ -32,6 +32,7 @@
   transform: translateY(-50%);
   color: var(--component-primary-color);
   background: var(--base-color);
+  white-space: nowrap;
 }
 
 .menu__item.expand .tooltip {

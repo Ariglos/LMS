@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,9 +8,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { LoginComponent } from './test/login/login.component';
 import { DashboardComponent } from './test/dashboard/dashboard.component';
-import {CoreModule} from "./core/core.module";
-import {SharedModule} from "./shared/shared.module";
+import { CoreModule } from './core/core.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { SharedModule } from './shared/shared.module';
+import {lastValueFrom} from "rxjs";
+
+export function appInitializerFactory(translateService: TranslateService) {
+  return async () => {
+    translateService.setDefaultLang('pl');
+    const translation$ = translateService.use('pl');
+    await lastValueFrom(translation$);
+  }
+}
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, DashboardComponent],
@@ -18,13 +35,27 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     FlexLayoutModule,
     ButtonModule,
     CoreModule,
     SharedModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
-  providers: [],
+  providers: [HttpClient,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: appInitializerFactory,
+      deps: [TranslateService],
+      multi: true
+    }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
