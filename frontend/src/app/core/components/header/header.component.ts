@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ThemeService} from "../../services/theme.service";
+import { ThemeService } from '../../services/theme.service';
+import { Theme } from '../../enums/Theme';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +9,19 @@ import {ThemeService} from "../../services/theme.service";
 })
 export class HeaderComponent implements OnInit {
 
+  themeBtnChecked: boolean;
+
   constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
+    this.initThemeBtn();
   }
 
-  onThemeChange(event: any) {
+   initThemeBtn() {
+    this.themeBtnChecked = this.themeService.getCurrentTheme() === Theme.Dark;
+  }
+
+   onThemeChange(event: any) {
     if (event.checked) {
       this.themeService.setDarkTheme();
     } else {
