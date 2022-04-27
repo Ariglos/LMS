@@ -1,67 +1,67 @@
 .menu {
-  background-color: var(--component-primary-color);
+  background-color: var(--primary-color);
   min-height: 100%;
-}
 
-.menu .menu__header {
-  margin: 1rem 0;
-}
+  &__header {
+    margin: 1rem 0;
 
-.menu .menu__header__title {
-  padding: 0 1rem;
-  font-size: 0.7rem;
-}
+    &__title {
+      padding: 0 1rem;
+      font-size: 0.7rem;
 
-.menu .menu__header__title .logo {
-  font-size: 2rem;
-}
+      .logo {
+        font-size: 2rem;
+      }
 
-.menu .menu__header__title .app-name {
-  font-size: 1rem;
-  font-weight: bold;
-}
+      .app-name {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+  }
 
-.menu__btn--expand {
-  border: none;
-  cursor: pointer;
-  color: var(--base-color);
-  background-color: transparent;
-  font-size: 1rem;
-  padding: 0.2rem 1rem;
-}
+  &__btn.expanded {
+    border: none;
+    cursor: pointer;
+    color: var(--base-color);
+    background-color: transparent;
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+  }
 
-.menu__btn--expand:only-child {
-  margin: 0 auto;
-}
+  &__btn.expanded:only-child {
+    margin: 0 auto;
+  }
 
-.menu .menu__navigation {
-  margin: 1rem;
-}
+  &__navigation {
+    margin: 1rem;
+  }
 
-.menu .menu__footer {
-background-color: var(--component-secondary-color);
-}
+  &__footer {
+    background-color: var(--secondary-color);
 
-.menu .menu__footer .profile {
-  padding: 0.8rem 1rem;
-}
+    .menu__btn-logout {
+      border: none;
+      cursor: pointer;
+      color: var(--base-color);
+      background-color: transparent;
+      padding: 0.2rem 1rem;
+    }
 
-.menu .menu__footer .profile .profile__name {
-  font-size: 1rem;
-}
+    .menu__btn-logout:only-child {
+      margin: 0 auto;
+    }
 
-.menu .menu__footer .profile .profile__role {
-  font-size: 0.8rem;
-}
+    .profile {
+      padding: 0.8rem 1rem;
 
-.menu .menu__footer .menu__btn_logout {
-  border: none;
-  cursor: pointer;
-  color: var(--base-color);
-  background-color: transparent;
-  padding: 0.2rem 1rem;
-}
+      &__name {
+        font-size: 1rem;
+      }
 
-.menu .menu__footer .menu__btn_logout:only-child {
-  margin: 0 auto;
+      &__role {
+        font-size: 0.8rem;
+      }
+    }
+  }
 }

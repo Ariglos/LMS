@@ -12,14 +12,14 @@
       <button
         *ngIf="expandedMode"
         (click)="onExpandBtnClick()"
-        class="menu__btn--expand"
+        class="menu__btn expanded"
       >
         <i class="pi pi-angle-double-left"></i>
       </button>
       <button
         *ngIf="!expandedMode"
         (click)="onExpandBtnClick()"
-        class="menu__btn--expand"
+        class="menu__btn expanded"
       >
         <i class="pi pi-angle-double-right"></i>
       </button>
@@ -38,7 +38,7 @@
       <div class="profile__name">Jan Wasowski</div>
       <div class="profile__role">PHP Developer</div>
     </div>
-    <button class="menu__btn_logout">
+    <button class="menu__btn-logout">
       <i class="pi pi-sign-out"></i>
     </button>
   </div>

@@ -9,17 +9,17 @@
 // Custom styles
 
 :root {
-  --base-background-color: #1E1E1E;
-  --component-primary-color: #2B2B3B;
-  --component-secondary-color: #252534;
+  --background-color: #1E1E1E;
+  --primary-color: #2B2B3B;
+  --secondary-color: #252534;
   --base-color: #FFFFFFDE;
 }
 
 html {
-  background-color: var(--base-background-color);
+  background-color: var(--background-color);
   color: var(--base-color);
 }
 
 .component {
-  background-color: var(--component-primary-colorr);
+  background-color: var(--primary-colorr);
 }

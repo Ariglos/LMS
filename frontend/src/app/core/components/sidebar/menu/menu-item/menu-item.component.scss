@@ -1,46 +1,50 @@
 .menu__item {
   position: relative;
-}
-.menu__item .menu__item__link {
-  padding: 0.8rem 0;
-  color: var(--base-color);
-  transition: all 0.4s ease;
-  border-radius: 0.6rem;
-  text-decoration: none;
-}
 
-.menu__item .menu__item__link:hover {
-  background-color: var(--base-color);
-  color: var(--component-primary-color);
+  &__link {
+    padding: 0.8rem 0;
+    color: var(--base-color);
+    transition: all 0.4s ease;
+    border-radius: 0.6rem;
+    text-decoration: none;
+  }
 
-}
+  &__link:hover {
+    background-color: var(--base-color);
+    color: var(--primary-color);
+  }
 
-.menu__item .menu__item__icon {
-  padding: 0 0.8rem;
-}
+  &__icon {
+    padding: 0 0.8rem;
+  }
 
-.menu__item .tooltip {
-  display: block;
-  position: absolute;
-  left: 170%;
-  top: 0;
-  min-width: 6rem;
-  text-align: center;
-  opacity: 0;
-  padding: 0.4rem;
-  border-radius: 0.4rem;
-  transform: translateY(-50%);
-  color: var(--component-primary-color);
-  background: var(--base-color);
-  white-space: nowrap;
-}
+  .tooltip {
+    display: block;
+    position: absolute;
+    left: 170%;
+    top: 0;
+    min-width: 6rem;
+    text-align: center;
+    opacity: 0;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    background: var(--base-color);
+    white-space: nowrap;
+  }
 
-.menu__item.expand .tooltip {
-  display: none;
-}
+  &.expanded {
+    .tooltip {
+      display: none;
+    }
+  }
 
-.menu__item:hover .tooltip {
-  transition: all 0.5s ease;
-  top: 50%;
-  opacity: 1;
+  &:hover {
+    .tooltip {
+      transition: all 0.5s ease;
+      top: 50%;
+      opacity: 1;
+    }
+  }
 }
