@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {ThemeService} from "./core/services/theme.service";
+import { ThemeService } from './core/services/theme.service';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,11 @@ import {ThemeService} from "./core/services/theme.service";
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(themeService: ThemeService) {
+  constructor(
+    private primengConfig: PrimeNGConfig,
+    private themeService: ThemeService
+  ) {
+    primengConfig.ripple = true;
     themeService.initializeTheme();
   }
 }
