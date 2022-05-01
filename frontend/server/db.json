@@ -1,0 +1,40 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "brand": "BMW",
+      "model": "M2",
+      "fuel": "PETROL",
+      "vin": "L2CCFX1E9WR3C6593",
+      "registrationNumber": "EWI9994",
+      "productionYear": "2019"
+    },
+    {
+      "id": 2,
+      "brand": "Audi",
+      "model": "A7",
+      "fuel": "DIESEL",
+      "vin": "99JYBU2886AHR5358",
+      "registrationNumber": "FMI0732",
+      "productionYear": "2019"
+    },
+    {
+      "id": 3,
+      "brand": "Peugeot",
+      "model": "206",
+      "fuel": "LNG",
+      "vin": "LPA3WLYD03EHE6169",
+      "registrationNumber": "PRA6421",
+      "productionYear": "2002"
+    },
+    {
+      "id": 4,
+      "brand": "Tesla",
+      "model": "S",
+      "fuel": "ELECTRIC",
+      "vin": "1J9Z2SW18MKVP5992",
+      "registrationNumber": "WPL6588",
+      "productionYear": "2022"
+    }
+  ]
+}
