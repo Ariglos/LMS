@@ -1,11 +1,9 @@
-<div fxLayout="column" fxLayoutAlign="space-between" class="menu">
+<div class="menu">
   <div>
-    <div fxLayoutAlign="space-between center" class="menu__header">
+    <div class="menu__header">
       <div
         *ngIf="expandedMode"
-        fxLayoutAlign="start center"
-        class="menu__header__title"
-      >
+        class="menu__header__title">
         <fa-icon class="logo" [icon]="faHouseLaptop"></fa-icon>
         <div class="app-name">{{'app-name' | translate }}</div>
       </div>
@@ -33,7 +31,7 @@
       </div>
     </div>
   </div>
-  <div fxLayoutAlign="space-between center" class="menu__footer">
+  <div class="menu__footer">
     <div *ngIf="expandedMode" class="profile">
       <div class="profile__name">Jan Wasowski</div>
       <div class="profile__role">PHP Developer</div>

@@ -1,4 +1,4 @@
-<div fxLayout="column" class="menu__item" [ngClass]="{'expanded': expandedMode}">
+<div class="menu__item" [ngClass]="{'expanded': expandedMode}">
   <a class="menu__item__link" [routerLink]="menuItem.link">
     <i class="menu__item__icon" [class]="menuItem.iconClass"></i>
    <span *ngIf="expandedMode">{{menuItem.name}}</span>

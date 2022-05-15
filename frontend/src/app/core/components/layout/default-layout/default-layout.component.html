@@ -1,9 +1,9 @@
-<div fxLayout fxLayoutGap="1rem" class="layout-container">
+<div class="default-layout">
   <app-sidebar></app-sidebar>
-  <div fxFlex fxLayout="column" fxLayoutGap="1rem">
+  <div class="default-layout__main">
     <app-header></app-header>
-    <div fxFlex fxLayout="column" fxLayoutAlign="space-between">
-      <div>
+    <div class="default-layout__main__content">
+      <div style="flex: 1 1 0">
         <router-outlet></router-outlet>
       </div>
       <app-footer></app-footer>

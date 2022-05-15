@@ -1,4 +1,8 @@
 .menu__item {
+  font-size: 1.4rem;
+  display: flex;
+  gap: 10rem;
+  flex-direction: column;
   position: relative;
 
   &__link {

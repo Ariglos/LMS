@@ -1,13 +1,21 @@
 .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--primary-color);
   min-height: 100%;
 
   &__header {
     margin: 1rem 0;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
 
     &__title {
       padding: 0 1rem;
       font-size: 0.7rem;
+      display: flex;
+      align-items: center;
 
       .logo {
         font-size: 2rem;
@@ -38,6 +46,9 @@
   }
 
   &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: var(--secondary-color);
 
     .menu__btn-logout {

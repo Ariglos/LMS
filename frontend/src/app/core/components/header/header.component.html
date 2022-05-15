@@ -1,11 +1,10 @@
-<div fxLayout="column">
-  <div fxLayoutAlign="space-between" class="header">
-    <h1 >LMS - Life Management System</h1>
-      <p-toggleButton
-        onIcon="pi pi-sun"
-        offIcon="pi pi-moon"
-        [(ngModel)]="themeBtnChecked"
-        (onChange)="onThemeChange($event)"
-      ></p-toggleButton>
-  </div>
+<div class="header">
+  <h1>LMS - Life Management System</h1>
+  <p-toggleButton
+    onIcon="pi pi-sun"
+    offIcon="pi pi-moon"
+    [(ngModel)]="themeBtnChecked"
+    (onChange)="onThemeChange($event)"
+  ></p-toggleButton>
 </div>
+
