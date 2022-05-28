@@ -1,5 +1,4 @@
 @import "../../../node_modules/primeng/resources/themes/lara-dark-indigo/theme.css";
-
 // Overridden theme
 
 .p-button:focus {
@@ -9,17 +8,13 @@
 // Custom styles
 
 :root {
+  --base-color: #FFFFFFDE;
   --background-color: #1E1E1E;
   --primary-color: #2B2B3B;
   --secondary-color: #252534;
-  --base-color: #FFFFFFDE;
 }
 
 html {
   background-color: var(--background-color);
   color: var(--base-color);
-}
-
-.component {
-  background-color: var(--primary-colorr);
 }

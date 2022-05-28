@@ -1,10 +1,12 @@
 <div class="header">
   <h1>LMS - Life Management System</h1>
-  <p-toggleButton
+  <div class="header__theme-switcher">
+    <p-toggleButton
     onIcon="pi pi-sun"
     offIcon="pi pi-moon"
     [(ngModel)]="themeBtnChecked"
     (onChange)="onThemeChange($event)"
-  ></p-toggleButton>
+    ></p-toggleButton>
+  </div>
 </div>
 

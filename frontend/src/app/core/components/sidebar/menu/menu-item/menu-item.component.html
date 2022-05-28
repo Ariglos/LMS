@@ -1,6 +1,6 @@
-<div class="menu__item" [ngClass]="{'expanded': expandedMode}">
-  <a class="menu__item__link" [routerLink]="menuItem.link">
-    <i class="menu__item__icon" [class]="menuItem.iconClass"></i>
+<div class="menu-item" [ngClass]="{'expanded': expandedMode}">
+  <a class="menu-link" [routerLink]="menuItem.link">
+    <i class="menu-link__icon" [class]="menuItem.iconClass"></i>
    <span *ngIf="expandedMode">{{menuItem.name}}</span>
   </a>
   <span class="tooltip">{{menuItem.name}}</span>

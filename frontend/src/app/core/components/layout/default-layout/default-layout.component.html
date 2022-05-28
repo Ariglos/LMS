@@ -1,9 +1,11 @@
 <div class="default-layout">
-  <app-sidebar></app-sidebar>
+  <div class="default-layout__sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
   <div class="default-layout__main">
     <app-header></app-header>
     <div class="default-layout__main__content">
-      <div style="flex: 1 1 0">
+      <div>
         <router-outlet></router-outlet>
       </div>
       <app-footer></app-footer>

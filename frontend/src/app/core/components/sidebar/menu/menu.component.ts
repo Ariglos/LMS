@@ -49,6 +49,11 @@ export class MenuComponent implements OnInit {
         link: '/settings',
       },
       {
+        name: this.translateService.instant('menu.info'),
+        iconClass: 'pi pi-info-circle',
+        link: '/info'
+      },
+      {
         name: this.translateService.instant('menu.log-in'),
         iconClass: 'pi pi-sign-in',
         link: '/login',
