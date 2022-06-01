@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SharedComponent implements OnInit {
 
+  showSpinner = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onToggleSpinner() {
+    this.showSpinner = !this.showSpinner;
+  }
 }
