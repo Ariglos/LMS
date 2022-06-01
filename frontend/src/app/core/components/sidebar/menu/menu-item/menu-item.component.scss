@@ -1,26 +1,26 @@
 .menu-item {
-  margin: 0.6rem 0;
   font-size: 1.4rem;
   display: flex;
   flex-direction: column;
+  gap: 0.6rem;
   position: relative;
 
-.menu-link {
-  padding: 0 0.4rem;
-  color: var(--base-color);
-  transition: all 0.4s ease;
-  border-radius: 0.6rem;
-  text-decoration: none;
-
-  &:hover {
-    background-color: var(--base-color);
-    color: var(--primary-color);
-  }
-
-  &__icon {
+  .menu-link {
     padding: 0.8rem;
+    color: var(--base-color);
+    transition: all 0.4s ease;
+    border-radius: 0.6rem;
+    text-decoration: none;
+
+    &:hover {
+      background-color: var(--base-color);
+      color: var(--primary-color);
+    }
+
+    &__icon {
+      padding: 0 0.8rem;
+    }
   }
-}
 
   .tooltip {
     display: none;

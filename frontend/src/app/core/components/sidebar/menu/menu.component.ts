@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  expandedMode = true;
+  expandedMode: boolean;
   faHouseLaptop = faHouseLaptop;
 
   menuOptions: MenuItem[];
@@ -17,6 +17,8 @@ export class MenuComponent implements OnInit {
   constructor(private translateService: TranslateService) {}
 
   ngOnInit(): void {
+    this.expandedMode = this.getMenuStateFromLocalStorage();
+
     this.menuOptions = [
       {
         name: this.translateService.instant('menu.home'),
@@ -51,7 +53,7 @@ export class MenuComponent implements OnInit {
       {
         name: this.translateService.instant('menu.info'),
         iconClass: 'pi pi-info-circle',
-        link: '/info'
+        link: '/info',
       },
       {
         name: this.translateService.instant('menu.log-in'),
@@ -63,5 +65,14 @@ export class MenuComponent implements OnInit {
 
   onExpandBtnClick() {
     this.expandedMode = !this.expandedMode;
+    this.saveMenuStateInLocalStorage(this.expandedMode);
+  }
+
+  private saveMenuStateInLocalStorage(expanded: boolean) {
+    localStorage.setItem('menu-expanded', String(expanded));
+  }
+
+  private getMenuStateFromLocalStorage(): boolean {
+    return localStorage.getItem('menu-expanded') === 'true';
   }
 }
