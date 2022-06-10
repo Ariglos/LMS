@@ -1,6 +1,10 @@
 {
   "app-name": "LMS",
   "general.spinner": "Spinner",
+  "general.notification.success": "Sukces",
+  "general.notification.info": "Info",
+  "general.notification.warn": "Ostrzeżenie",
+  "general.notification.error": "Błąd",
   "menu.home": "Strona główna",
   "menu.finances": "Finanse",
   "menu.diet": "Dieta",

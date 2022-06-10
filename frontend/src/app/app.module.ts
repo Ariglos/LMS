@@ -14,6 +14,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SharedModule } from './shared/shared.module';
 import {lastValueFrom} from "rxjs";
+import { NotificationComponent } from './services/notification/components/notification/notification.component';
+import {ToastModule} from "primeng/toast";
+import {MessageService} from "primeng/api";
 
 export function appInitializerFactory(translateService: TranslateService) {
   return async () => {
@@ -29,7 +32,12 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, DashboardComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    DashboardComponent,
+    NotificationComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -46,14 +54,18 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient],
       },
     }),
+    ToastModule,
   ],
-  providers: [HttpClient,
+  providers: [
+    MessageService,
+    HttpClient,
     {
       provide: APP_INITIALIZER,
       useFactory: appInitializerFactory,
       deps: [TranslateService],
-      multi: true
-    }],
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

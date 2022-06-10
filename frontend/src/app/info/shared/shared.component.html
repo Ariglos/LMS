@@ -1,9 +1,27 @@
 <h1>Shared components</h1>
 
-<p-button
-  label="{{'general.spinner' | translate}}"
-  (onClick)="onToggleSpinner()">
-</p-button>
+<div class="btn-container">
+  <p-button
+    label="{{'general.spinner' | translate}}"
+    (onClick)="onToggleSpinner()">
+  </p-button>
+  <p-button
+    label="{{'general.notification.success' | translate}}"
+    (onClick)="onNotificationSuccess()">
+  </p-button>
+  <p-button
+    label="{{'general.notification.info' | translate}}"
+    (onClick)="onNotificationInfo()">
+  </p-button>
+  <p-button
+    label="{{'general.notification.warn' | translate}}"
+    (onClick)="onNotificationWarn()">
+  </p-button>
+  <p-button
+    label="{{'general.notification.error' | translate}}"
+    (onClick)="onNotificationError()">
+  </p-button>
+</div>
 
 <div class="wrapper">
   <app-spinner *ngIf="showSpinner"></app-spinner>
