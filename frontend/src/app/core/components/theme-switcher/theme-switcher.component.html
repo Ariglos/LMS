@@ -1,0 +1,5 @@
+<div>
+  <mat-slide-toggle labelPosition="before" [(ngModel)]="checked" (change)="onThemeChange($event)">
+    <i class="pi" [ngClass]="{ 'pi-moon': checked, 'pi-sun': !checked }"> </i>
+  </mat-slide-toggle>
+</div>

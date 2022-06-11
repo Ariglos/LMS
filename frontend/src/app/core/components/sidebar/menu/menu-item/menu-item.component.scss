@@ -36,6 +36,7 @@
     color: var(--primary-color);
     background: var(--base-color);
     white-space: nowrap;
+    z-index: 100;
   }
 
   &:hover:not(.expanded) {

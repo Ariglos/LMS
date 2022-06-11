@@ -13,6 +13,8 @@ import { MenuComponent } from './components/sidebar/menu/menu.component';
 import { MenuItemComponent } from './components/sidebar/menu/menu-item/menu-item.component';
 import {ButtonModule} from "primeng/button";
 import {SharedModule} from "../shared/shared.module";
+import { ThemeSwitcherComponent } from './components/theme-switcher/theme-switcher.component';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import {SharedModule} from "../shared/shared.module";
     FullWidthLayoutComponent,
     MenuComponent,
     MenuItemComponent,
+    ThemeSwitcherComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -31,7 +34,8 @@ import {SharedModule} from "../shared/shared.module";
     ToggleButtonModule,
     FontAwesomeModule,
     ButtonModule,
-    SharedModule
+    SharedModule,
+    MatSlideToggleModule,
   ],
 })
 export class CoreModule {}
