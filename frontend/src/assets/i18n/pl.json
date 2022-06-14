@@ -12,5 +12,11 @@
   "menu.users": "Użytkownicy",
   "menu.settings": "Ustawienia",
   "menu.info": "Info",
-  "menu.log-in": "Zaloguj"
+  "menu.log-in": "Zaloguj",
+  "info-page.header": "Informacje o stylach i komponentach",
+  "styles-page.header": "Style aplikacji",
+  "styles-page.layout-page.header": "Strona",
+  "styles-page.layout-card.header": "Karta",
+  "styles-page.typography.header": "Typografia",
+  "shared-page.header": "Dzielone komponenty"
 }

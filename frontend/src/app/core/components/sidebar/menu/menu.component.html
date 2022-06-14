@@ -1,11 +1,9 @@
 <div class="menu">
   <div>
     <div class="menu__header">
-      <div
-        *ngIf="expandedMode"
-        class="menu__header__title">
+      <div *ngIf="expandedMode" class="menu__header__title">
         <fa-icon class="logo" [icon]="faHouseLaptop"></fa-icon>
-        <div class="app-name">{{'app-name' | translate }}</div>
+        <div class="app-name">{{ "app-name" | translate }}</div>
       </div>
       <button
         *ngIf="expandedMode"

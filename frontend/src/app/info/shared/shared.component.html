@@ -1,33 +1,46 @@
-<h1>Shared components</h1>
+<div class="app-page">
+  <div class="app-page__header">
+    <h1>{{'shared-page.header' | translate}}</h1>
+  </div>
 
-<div class="btn-container">
-  <p-button
-    label="{{'general.spinner' | translate}}"
-    (onClick)="onToggleSpinner()">
-  </p-button>
-  <p-button
-    label="{{'general.notification.success' | translate}}"
-    (onClick)="onNotificationSuccess()">
-  </p-button>
-  <p-button
-    label="{{'general.notification.info' | translate}}"
-    (onClick)="onNotificationInfo()">
-  </p-button>
-  <p-button
-    label="{{'general.notification.warn' | translate}}"
-    (onClick)="onNotificationWarn()">
-  </p-button>
-  <p-button
-    label="{{'general.notification.error' | translate}}"
-    (onClick)="onNotificationError()">
-  </p-button>
-</div>
+  <div class="btn-container">
+    <p-button
+      label="{{'general.spinner' | translate}}"
+      (onClick)="onToggleSpinner()">
+    </p-button>
+    <p-button
+      label="{{'general.notification.success' | translate}}"
+      (onClick)="onNotificationSuccess()">
+    </p-button>
+    <p-button
+      label="{{'general.notification.info' | translate}}"
+      (onClick)="onNotificationInfo()">
+    </p-button>
+    <p-button
+      label="{{'general.notification.warn' | translate}}"
+      (onClick)="onNotificationWarn()">
+    </p-button>
+    <p-button
+      label="{{'general.notification.error' | translate}}"
+      (onClick)="onNotificationError()">
+    </p-button>
+  </div>
 
-<div class="wrapper">
-  <app-spinner *ngIf="showSpinner"></app-spinner>
+  <div class="app-card">
+    <div class="app-card__header">
+      <h1>Tytuł</h1>
+      <h2>Podtytuł</h2>
+    </div>
+    <div>Content</div>
+    <div class="app-card__footer">Footer</div>
+  </div>
 
-  <h2>Form</h2>
-  <form>
-    Test form
-  </form>
+  <div class="wrapper">
+    <app-spinner *ngIf="showSpinner"></app-spinner>
+
+    <h2>Form</h2>
+    <form>
+      Test form
+    </form>
+  </div>
 </div>
