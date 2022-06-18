@@ -1,36 +1,87 @@
 <div class="app-page">
   <div class="app-page__header">
-    <h1>{{'shared-page.header' | translate}}</h1>
+    <h1>{{ "shared-page.header" | translate }}</h1>
   </div>
 
-  <div class="btn-container">
-    <p-button
-      label="{{'general.spinner' | translate}}"
-      (onClick)="onToggleSpinner()">
-    </p-button>
-    <p-button
-      label="{{'general.notification.success' | translate}}"
-      (onClick)="onNotificationSuccess()">
-    </p-button>
-    <p-button
-      label="{{'general.notification.info' | translate}}"
-      (onClick)="onNotificationInfo()">
-    </p-button>
-    <p-button
-      label="{{'general.notification.warn' | translate}}"
-      (onClick)="onNotificationWarn()">
-    </p-button>
-    <p-button
-      label="{{'general.notification.error' | translate}}"
-      (onClick)="onNotificationError()">
-    </p-button>
+  <div class="app-card container">
+    <div class="app-card__header">
+      <h2>{{ "shared-page.buttons" | translate }}</h2>
+    </div>
+    <div class="app-card">
+      <div class="app-card__header">
+        <h3>{{ "shared-page.buttons.severity" | translate }}</h3>
+      </div>
+      <div class="btn-container">
+        <app-button label="Primary" severity="primary"></app-button>
+        <app-button label="Secondary" severity="secondary"></app-button>
+        <app-button label="Success" severity="success"></app-button>
+        <app-button label="Info" severity="info"></app-button>
+        <app-button label="Warning" severity="warning"></app-button>
+        <app-button label="Help" severity="help"></app-button>
+        <app-button label="Danger" severity="danger"></app-button>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-card__header">
+        <h3>{{ "shared-page.buttons.icons" | translate }}</h3>
+      </div>
+      <div class="btn-container">
+        <app-button label="Left" icon="pi pi-home"></app-button>
+        <app-button
+          label="Right"
+          icon="pi pi-home"
+          iconPos="right"
+        ></app-button>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-card__header">
+        <h3>{{ "general.notifications" | translate }}</h3>
+      </div>
+      <div class="btn-container">
+        <app-button
+          label="{{ 'general.notification.success' | translate }}"
+          (onClick)="onNotificationSuccess()"
+        >
+        </app-button>
+        <app-button
+          label="{{ 'general.notification.info' | translate }}"
+          (onClick)="onNotificationInfo()"
+        >
+        </app-button>
+        <app-button
+          label="{{ 'general.notification.warn' | translate }}"
+          (onClick)="onNotificationWarn()"
+        >
+        </app-button>
+        <app-button
+          label="{{ 'general.notification.error' | translate }}"
+          (onClick)="onNotificationError()"
+        >
+        </app-button>
+      </div>
+    </div>
+    <div class="app-card">
+      <div class="app-card__header">
+        <h3>{{ "general.indicators" | translate }}</h3>
+      </div>
+      <div class="btn-container">
+        <app-button
+          label="{{ 'general.spinner' | translate }}"
+          (onClick)="onToggleSpinner()"
+        >
+        </app-button>
+      </div>
+    </div>
   </div>
-  <div class="wrapper">
-    <app-spinner *ngIf="showSpinner"></app-spinner>
-
-    <h2>Form</h2>
-    <form>
-      Test form
-    </form>
+  <div class="app-card">
+    <div class="app-card__header">
+      <h2>{{ "shared-page.buttons.forms" | translate }}</h2>
+    </div>
+    <div class="wrapper">
+      <app-spinner *ngIf="showSpinner"></app-spinner>
+      <h2>Form</h2>
+      <form>Test form</form>
+    </div>
   </div>
 </div>

@@ -1,6 +1,8 @@
 {
   "app-name": "LMS",
+  "general.indicators": "Wskaźniki",
   "general.spinner": "Spinner",
+  "general.notifications": "Powiadomienia",
   "general.notification.success": "Sukces",
   "general.notification.info": "Info",
   "general.notification.warn": "Ostrzeżenie",
@@ -18,5 +20,9 @@
   "styles-page.layout-page.header": "Strona",
   "styles-page.layout-card.header": "Karta",
   "styles-page.typography.header": "Typografia",
-  "shared-page.header": "Dzielone komponenty"
+  "shared-page.header": "Dzielone komponenty",
+  "shared-page.buttons": "Przyciski",
+  "shared-page.buttons.severity": "Typy przycisków",
+  "shared-page.buttons.icons": "Ikony",
+  "shared-page.buttons.forms": "Formularze"
 }

@@ -5,11 +5,18 @@ import { HttpClient } from '@angular/common/http';
 import { SpinnerComponent } from './components/indicators/spinner/spinner.component';
 import {ProgressSpinnerModule} from "primeng/progressspinner";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { ButtonComponent } from './components/buttons/button/button.component';
+import {ButtonModule} from "primeng/button";
 
 @NgModule({
-  declarations: [SpinnerComponent],
-  imports: [CommonModule, ProgressSpinnerModule, MatSlideToggleModule],
-  exports: [TranslateModule, SpinnerComponent],
+  declarations: [SpinnerComponent, ButtonComponent],
+  imports: [
+    CommonModule,
+    ProgressSpinnerModule,
+    MatSlideToggleModule,
+    ButtonModule,
+  ],
+  exports: [TranslateModule, SpinnerComponent, ButtonComponent],
   providers: [HttpClient],
 })
 export class SharedModule {}

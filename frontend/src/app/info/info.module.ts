@@ -4,13 +4,12 @@ import { StylesComponent } from './styles/styles.component';
 import { SharedComponent } from './shared/shared.component';
 import { InfoComponent } from './info.component';
 import {InfoRoutingModule} from "./info-routing.module";
-import {ButtonModule} from "primeng/button";
 import {SharedModule} from "../shared/shared.module";
 
 
 
 @NgModule({
   declarations: [StylesComponent, SharedComponent, InfoComponent],
-  imports: [CommonModule, InfoRoutingModule, ButtonModule, SharedModule],
+  imports: [CommonModule, InfoRoutingModule, SharedModule],
 })
 export class InfoModule {}

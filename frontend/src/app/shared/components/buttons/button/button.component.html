@@ -1,0 +1,10 @@
+<p-button
+  styleClass="p-button-raised"
+  [styleClass]="getSeverityClass()"
+  [type]="type"
+  [label]="label"
+  [icon]="icon"
+  [iconPos]="iconPos"
+  [disabled]="disabled"
+  (onClick)="onClick.emit()"
+></p-button>
