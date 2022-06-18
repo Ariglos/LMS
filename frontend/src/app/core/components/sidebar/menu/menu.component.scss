@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--primary-color);
   min-height: 100%;
 
   &__header {
@@ -43,36 +42,5 @@
 
   &__navigation {
     margin: 1rem;
-  }
-
-  &__footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--secondary-color);
-
-    .menu__btn-logout {
-      border: none;
-      cursor: pointer;
-      color: var(--base-color);
-      background-color: transparent;
-      padding: 0.2rem 1rem;
-    }
-
-    .menu__btn-logout:only-child {
-      margin: 0 auto;
-    }
-
-    .profile {
-      padding: 0.8rem 1rem;
-
-      &__name {
-        font-size: 1rem;
-      }
-
-      &__role {
-        font-size: 0.8rem;
-      }
-    }
   }
 }

@@ -14,7 +14,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SharedModule } from './shared/shared.module';
 import {lastValueFrom} from "rxjs";
-import { NotificationComponent } from './services/notification/components/notification/notification.component';
 import {ToastModule} from "primeng/toast";
 import {MessageService} from "primeng/api";
 
@@ -36,7 +35,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    NotificationComponent,
   ],
   imports: [
     BrowserModule,
