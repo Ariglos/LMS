@@ -2,7 +2,6 @@
   <div class="app-page__header">
     <h1>{{ "shared-page.header" | translate }}</h1>
   </div>
-
   <div class="app-card container">
     <div class="app-card__header">
       <h2>{{ "shared-page.buttons" | translate }}</h2>
@@ -78,10 +77,20 @@
     <div class="app-card__header">
       <h2>{{ "shared-page.buttons.forms" | translate }}</h2>
     </div>
+    <app-button label="Toggle inline" (onClick)="onToggleInline()"></app-button>
     <div class="wrapper">
       <app-spinner *ngIf="showSpinner"></app-spinner>
-      <h2>Form</h2>
-      <form>Test form</form>
+      <form [formGroup]="form" autocomplete="off" (ngSubmit)="onSubmit()">
+        <app-form-field
+          label="Labelka"
+          [control]="form.controls['input']"
+          [isInline]="isInline"
+        >
+          <app-input placeholder="input" formControlName="input"></app-input>
+        </app-form-field>
+        <app-button label="Submit" type="submit"></app-button>
+      </form>
+      <pre>{{form.value | json}}</pre>
     </div>
   </div>
 </div>

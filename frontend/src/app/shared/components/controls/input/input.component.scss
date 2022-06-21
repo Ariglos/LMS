@@ -1,0 +1,6 @@
+:host-context(.form-field_invalid) {
+  input {
+    border: 1px solid var(--error);
+    background-color: var(--error-background);
+  }
+}

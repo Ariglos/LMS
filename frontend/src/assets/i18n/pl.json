@@ -24,5 +24,6 @@
   "shared-page.buttons": "Przyciski",
   "shared-page.buttons.severity": "Typy przycisków",
   "shared-page.buttons.icons": "Ikony",
-  "shared-page.buttons.forms": "Formularze"
+  "shared-page.buttons.forms": "Formularze",
+  "validation.error.required": "Pole jest wymagane"
 }

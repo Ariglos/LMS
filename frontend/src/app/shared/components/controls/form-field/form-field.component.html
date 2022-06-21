@@ -1,0 +1,21 @@
+<div
+  class="form-field"
+  [ngClass]="{
+    'form-field_invalid': hasErrors(),
+    'form-field_inline': isInline
+  }"
+>
+  <label class="form-field__label" [style.width]="labelWidth">
+    {{ label }}
+  </label>
+  <div>
+    <ng-content></ng-content>
+  </div>
+</div>
+<div
+  class="form-field__error"
+  [style.visibility]="hasErrors() ? 'visible' : 'hidden'"
+  [style.margin-left]="isInline ? labelWidth : ''"
+>
+  {{ "validation.error." + errorKey | translate }}
+</div>

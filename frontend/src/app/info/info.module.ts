@@ -5,11 +5,17 @@ import { SharedComponent } from './shared/shared.component';
 import { InfoComponent } from './info.component';
 import {InfoRoutingModule} from "./info-routing.module";
 import {SharedModule} from "../shared/shared.module";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
 @NgModule({
   declarations: [StylesComponent, SharedComponent, InfoComponent],
-  imports: [CommonModule, InfoRoutingModule, SharedModule],
+  imports: [
+    CommonModule,
+    InfoRoutingModule,
+    SharedModule,
+    ReactiveFormsModule,
+  ],
 })
 export class InfoModule {}

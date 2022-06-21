@@ -1,18 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import {NotificationService} from "../../services/notification/notification.service";
+import { NotificationService } from '../../services/notification/notification.service';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {markFormGroupTouched} from "../../shared/utils/form";
 
 @Component({
   selector: 'app-shared',
   templateUrl: './shared.component.html',
-  styleUrls: ['./shared.component.scss']
+  styleUrls: ['./shared.component.scss'],
 })
 export class SharedComponent implements OnInit {
 
+  form: FormGroup;
+  isInline = false;
   showSpinner = false;
 
-  constructor(private notificationService: NotificationService) { }
+  constructor(
+    private fb: FormBuilder,
+    private notificationService: NotificationService
+  ) {}
 
   ngOnInit(): void {
+    this.form = this.fb.group({
+      input: [null, [Validators.required]]
+    });
   }
 
   onToggleSpinner() {
@@ -20,18 +30,30 @@ export class SharedComponent implements OnInit {
   }
 
   onNotificationSuccess() {
-    this.notificationService.addSuccessMessage("Test");
+    this.notificationService.addSuccessMessage('Test');
   }
 
   onNotificationInfo() {
-    this.notificationService.addInfoMessage("Test");
+    this.notificationService.addInfoMessage('Test');
   }
 
   onNotificationWarn() {
-    this.notificationService.addWarnMessage("Test");
+    this.notificationService.addWarnMessage('Test');
   }
 
   onNotificationError() {
-    this.notificationService.addErrorMessage("Test");
+    this.notificationService.addErrorMessage('Test');
+  }
+
+  onToggleInline() {
+    this.isInline = !this.isInline;
+  }
+
+  onSubmit() {
+    if (this.form.invalid) {
+      markFormGroupTouched(this.form);
+    } else {
+      console.log('OnSubmit');
+    }
   }
 }

@@ -1,0 +1,9 @@
+<input
+  [(ngModel)]="value"
+  type="text"
+  [placeholder]="placeholder || ''"
+  [disabled]="isDisabled"
+  pInputText
+  (keyup)="onKeyup()"
+  (blur)="onBlur()"
+/>
