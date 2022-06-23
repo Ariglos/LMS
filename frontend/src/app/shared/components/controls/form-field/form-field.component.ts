@@ -20,11 +20,11 @@ export class FormFieldComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  hasErrors(): boolean {
-    return this.control && this.control.invalid && this.control.touched;
-  }
-
   get errorKey() {
     return this.control.errors && Object.keys(this.control.errors)[0];
+  }
+
+  hasErrors(): boolean {
+    return this.control && this.control.invalid && this.control.touched;
   }
 }

@@ -77,20 +77,33 @@
     <div class="app-card__header">
       <h2>{{ "shared-page.buttons.forms" | translate }}</h2>
     </div>
-    <app-button label="Toggle inline" (onClick)="onToggleInline()"></app-button>
+    <div class="btn-container">
+      <app-button label="Toggle inline" (onClick)="onToggleInline()"></app-button>
+      <app-button label="Toggle disable" (onClick)="onDisable()"></app-button>
+    </div>
     <div class="wrapper">
       <app-spinner *ngIf="showSpinner"></app-spinner>
       <form [formGroup]="form" autocomplete="off" (ngSubmit)="onSubmit()">
         <app-form-field
-          label="Labelka"
+          label="Input"
           [control]="form.controls['input']"
           [isInline]="isInline"
         >
           <app-input placeholder="input" formControlName="input"></app-input>
         </app-form-field>
+        <app-form-field
+          label="Password"
+          [control]="form.controls['password']"
+          [isInline]="isInline"
+        >
+          <app-input-password
+            placeholder="password"
+            formControlName="password"
+          ></app-input-password>
+        </app-form-field>
         <app-button label="Submit" type="submit"></app-button>
       </form>
-      <pre>{{form.value | json}}</pre>
+      <pre>{{ form.value | json }}</pre>
     </div>
   </div>
 </div>
