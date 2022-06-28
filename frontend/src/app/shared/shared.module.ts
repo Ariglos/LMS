@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import {HttpLoaderFactory} from "../app.module";
 import { InputPasswordComponent } from './components/controls/input-password/input-password.component';
 import {PasswordModule} from "primeng/password";
+import { InputNumberComponent } from './components/controls/input-number/input-number.component';
+import {InputNumberModule} from "primeng/inputnumber";
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import {PasswordModule} from "primeng/password";
     FormFieldComponent,
     InputComponent,
     InputPasswordComponent,
+    InputNumberComponent,
   ],
   imports: [
     CommonModule,
@@ -39,6 +42,7 @@ import {PasswordModule} from "primeng/password";
       extend: true,
     }),
     PasswordModule,
+    InputNumberModule,
   ],
   exports: [
     TranslateModule,
@@ -47,6 +51,7 @@ import {PasswordModule} from "primeng/password";
     FormFieldComponent,
     InputComponent,
     InputPasswordComponent,
+    InputNumberComponent,
   ],
   providers: [HttpClient, TranslateService],
 })

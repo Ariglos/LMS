@@ -1,0 +1,13 @@
+<p-inputNumber
+  [disabled]="isDisabled"
+  [(ngModel)]="value"
+  [placeholder]="placeholder"
+  [minFractionDigits]="minFractionDigits"
+  [maxFractionDigits]="maxFractionDigits"
+  [mode]="mode"
+  [currency]="currency"
+  [prefix]="prefix"
+  [suffix]="suffix"
+  (onInput)="onInput($event)"
+  (onBlur)="onBlur()"
+></p-inputNumber>

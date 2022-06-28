@@ -101,6 +101,64 @@
             formControlName="password"
           ></app-input-password>
         </app-form-field>
+        <app-form-field
+          label="Number"
+          [control]="form.controls['number']"
+          [isInline]="isInline"
+        >
+          <app-input-number
+            placeholder="number"
+            formControlName="number"
+          ></app-input-number>
+        </app-form-field>
+        <app-form-field
+          label="Decimal"
+          [control]="form.controls['decimal']"
+          [isInline]="isInline"
+        >
+          <app-input-number
+            placeholder="decimal"
+            formControlName="decimal"
+            mode="decimal"
+            [minFractionDigits]="2"
+            [maxFractionDigits]="4"
+          ></app-input-number>
+        </app-form-field>
+        <app-form-field
+          label="Currency"
+          [control]="form.controls['currency']"
+          [isInline]="isInline"
+        >
+          <app-input-number
+            placeholder="currency"
+            formControlName="currency"
+            mode="currency"
+            currency="PLN"
+            [maxFractionDigits]="2"
+          ></app-input-number>
+        </app-form-field>
+        <app-form-field
+          label="Prefix"
+          [control]="form.controls['prefix']"
+          [isInline]="isInline"
+        >
+          <app-input-number
+            placeholder="prefix"
+            formControlName="prefix"
+            [prefix]="'prefix '"
+          ></app-input-number>
+        </app-form-field>
+        <app-form-field
+          label="Suffix"
+          [control]="form.controls['suffix']"
+          [isInline]="isInline"
+        >
+          <app-input-number
+            placeholder="suffix"
+            formControlName="suffix"
+            [suffix]="' suffix'"
+          ></app-input-number>
+        </app-form-field>
         <app-button label="Submit" type="submit"></app-button>
       </form>
       <pre>{{ form.value | json }}</pre>

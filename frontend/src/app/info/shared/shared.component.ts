@@ -22,6 +22,11 @@ export class SharedComponent implements OnInit {
     this.form = this.fb.group({
       input: [null, [Validators.required]],
       password: [null, [Validators.required]],
+      number: [null, [Validators.required]],
+      decimal: [null, [Validators.required]],
+      currency: [null, [Validators.required]],
+      prefix: [null, [Validators.required]],
+      suffix: [null, [Validators.required]],
     });
   }
 
