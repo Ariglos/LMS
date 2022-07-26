@@ -1,8 +1,8 @@
 :host-context(.form-field_invalid) {
   p-inputNumber::ng-deep {
     .p-inputnumber .p-inputnumber-input {
-      border: 1px solid var(--error) !important;
-      background-color: var(--error-background) !important;
+      border: 1px solid var(--error);
+      background-color: var(--error-background);
     }
   }
 }

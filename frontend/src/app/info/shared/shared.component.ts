@@ -27,6 +27,7 @@ export class SharedComponent implements OnInit {
       currency: [null, [Validators.required]],
       prefix: [null, [Validators.required]],
       suffix: [null, [Validators.required]],
+      boolean: [null, [Validators.required]]
     });
   }
 

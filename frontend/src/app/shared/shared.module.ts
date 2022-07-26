@@ -16,6 +16,8 @@ import { InputPasswordComponent } from './components/controls/input-password/inp
 import {PasswordModule} from "primeng/password";
 import { InputNumberComponent } from './components/controls/input-number/input-number.component';
 import {InputNumberModule} from "primeng/inputnumber";
+import { InputBooleanComponent } from './components/controls/input-boolean/input-boolean.component';
+import {SelectButtonModule} from "primeng/selectbutton";
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import {InputNumberModule} from "primeng/inputnumber";
     InputComponent,
     InputPasswordComponent,
     InputNumberComponent,
+    InputBooleanComponent,
   ],
   imports: [
     CommonModule,
@@ -43,6 +46,7 @@ import {InputNumberModule} from "primeng/inputnumber";
     }),
     PasswordModule,
     InputNumberModule,
+    SelectButtonModule,
   ],
   exports: [
     TranslateModule,
@@ -52,6 +56,7 @@ import {InputNumberModule} from "primeng/inputnumber";
     InputComponent,
     InputPasswordComponent,
     InputNumberComponent,
+    InputBooleanComponent,
   ],
   providers: [HttpClient, TranslateService],
 })

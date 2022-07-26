@@ -159,6 +159,15 @@
             [suffix]="' suffix'"
           ></app-input-number>
         </app-form-field>
+        <app-form-field
+          label="Boolean"
+          [control]="form.controls['boolean']"
+          [isInline]="isInline"
+        >
+          <app-input-boolean
+            formControlName="boolean"
+          ></app-input-boolean>
+        </app-form-field>
         <app-button label="Submit" type="submit"></app-button>
       </form>
       <pre>{{ form.value | json }}</pre>

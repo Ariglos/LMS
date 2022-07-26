@@ -1,0 +1,9 @@
+:host-context(.form-field_invalid) {
+  p-selectbutton::ng-deep {
+    .p-selectbutton div {
+      outline: 1px solid var(--error);
+      border-color: transparent;
+      background-color: var(--error-background);
+    }
+  }
+}
